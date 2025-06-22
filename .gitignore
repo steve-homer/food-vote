@@ -21,7 +21,7 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/  # <--- THIS LINE FIXES YOUR SPECIFIC WARNING
+*.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
@@ -40,5 +40,4 @@ venv.bak/
 *.db
 
 # IDE / Editor folders
-.vscode/
 .idea/
