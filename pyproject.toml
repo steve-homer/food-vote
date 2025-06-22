@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "my_web_app"
+version = "0.1.0"
+description = "No description set"
+requires-python = ">=3.10"
+dependencies = [
+    "flask",
+    "flask-material",
+    "Flask-SQLAlchemy"
+]
+[project.optional-dependencies]
+dev = ["ruff", "mypy", "pytest", "pytest-cov", "build"]

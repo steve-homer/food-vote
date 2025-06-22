@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Pictures{% endblock %}
+{% block content %}
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+        <h1>Pictures Page</h1>
+        <p>Enjoy these random pictures!</p>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" style="text-align: center;">
+        <img src="https://picsum.photos/300/300" alt="A random picture" style="width:100%;">
+        <p><em>“Freedom lies in being bold.”</em><br>- Robert Frost</p>
+        <h4>Votes: {{ votes.image1 }}</h4>
+        <a href="{{ url_for('vote', image_id='image1', direction='up') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+            <i class="material-icons">thumb_up</i>
+        </a>
+        <a href="{{ url_for('vote', image_id='image1', direction='down') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" {% if votes.image1 <= 0 %}disabled{% endif %}>
+            <i class="material-icons">thumb_down</i>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" style="text-align: center;">
+        <img src="https://picsum.photos/301/300" alt="Another random picture" style="width:100%;">
+        <p><em>“I am no bird; and no net ensnares me: I am a free human being with an independent will.”</em><br>- Charlotte Brontë</p>
+        <h4>Votes: {{ votes.image2 }}</h4>
+        <a href="{{ url_for('vote', image_id='image2', direction='up') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+            <i class="material-icons">thumb_up</i>
+        </a>
+        <a href="{{ url_for('vote', image_id='image2', direction='down') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" {% if votes.image2 <= 0 %}disabled{% endif %}>
+            <i class="material-icons">thumb_down</i>
+        </a>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col" style="text-align: center;">
+        <img src="https://picsum.photos/300/301" alt="A third random picture" style="width:100%;">
+        <p><em>“Freedom is not worth having if it does not include the freedom to make mistakes.”</em><br>- Mahatma Gandhi</p>
+        <h4>Votes: {{ votes.image3 }}</h4>
+        <a href="{{ url_for('vote', image_id='image3', direction='up') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+            <i class="material-icons">thumb_up</i>
+        </a>
+        <a href="{{ url_for('vote', image_id='image3', direction='down') }}" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored" {% if votes.image3 <= 0 %}disabled{% endif %}>
+            <i class="material-icons">thumb_down</i>
+        </a>
+    </div>
+</div>
+{% endblock %} 
