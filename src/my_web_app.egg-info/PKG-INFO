@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: my_web_app
+Version: 0.1.0
+Summary: No description set
+Requires-Python: >=3.10
+Requires-Dist: flask
+Requires-Dist: flask-material
+Requires-Dist: Flask-SQLAlchemy
+Provides-Extra: dev
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: build; extra == "dev"

@@ -1,0 +1,10 @@
+flask
+flask-material
+Flask-SQLAlchemy
+
+[dev]
+ruff
+mypy
+pytest
+pytest-cov
+build
